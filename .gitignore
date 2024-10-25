@@ -1,0 +1,45 @@
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# Environment variables
+.env
+.env.test
+.env.production
+.env.local
+
+# Typescript output
+dist/
+build/
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Logs
+*.log
+
+# IDE specific files
+.vscode/
+.idea/
+
+# Optional npm cache directory
+.npm/
+
+# Optional eslint cache
+.eslintcache
+
+# MacOS system files
+.DS_Store
+
+# Test coverage directory
+coverage/
+
+# Temporary files
+tmp/
+temp/
