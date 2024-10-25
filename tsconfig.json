@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "rootDir": "./src",
+    "outDir": "./dist",
+    "esModuleInterop": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "baseUrl": "./src",  // Set baseUrl to the src folder
+    "paths": {
+      "@/*": ["*"]  // Map @ to the src folder, remove the leading './'
+    }
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
+}
