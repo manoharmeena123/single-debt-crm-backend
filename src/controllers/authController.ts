@@ -4,9 +4,12 @@ import User from "@/models/userModel"; // Mongoose User model
 import { validateUser } from "@/validation/userValidator"; // Joi validation
 import jwt from "jsonwebtoken";
 import { ROLES } from "@/constant/roles"; // Assuming you've added roles constants
+
+
+
 dotenv.config();
 
-const JWT_SECRET = process.env.JWT_SECRET || "your_secret_key";
+// const JWT_SECRET = process.env.JWT_SECRET 
 
 // Register a new user
 export const registerUser = async (
@@ -84,7 +87,7 @@ export const loginUser = async (req: Request, res: Response): Promise<void> => {
     }
 
     // Generate JWT Token
-    const token = jwt.sign({ _id: user._id, role: user.role }, JWT_SECRET, {
+    const token = jwt.sign({ _id: user._id, role: user.role }, `${process.env.JWT_SECRET}`, {
       expiresIn: "1h",
     });
 
